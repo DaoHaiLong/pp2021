@@ -69,14 +69,14 @@ def inputCourses():
 
 #-------------------------------------------Mark------------------------------------#
 class mark:
-    def __init__(self,id,cid,marks):
-        self.id=id
+    def __init__(self,cid,id,marks):
         self.cid=cid
+        self.id=id
         self.marks=marks
         Mark.append(self)
          
     def describe(self):
-        print(["Coursesid:"],self.id, ["Studentid:"],self.cid, ["mark:"],self.marks)
+        print(["Coursesid:"],self.cid, ["Studentid:"],self.id, ["mark:"],self.marks)
     
 def inputMark():
     print("Enter Courses id")
