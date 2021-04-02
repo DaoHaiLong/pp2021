@@ -89,6 +89,10 @@ class mark:
              if id in StudentID:
                  print("Entrer marks:")
                  marks=float(input())
+                 if marks<0 or marks >20:
+                     print("Error")
+                     print("Enter marks again")
+                     marks=float(input())
              else:
                  return 0
          else:
