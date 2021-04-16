@@ -8,6 +8,7 @@ from domain.Mark import *
 py = curses.initscr() 
 curses.start_color()
 
+
 class inputs():
      
      def input_number_student():
@@ -54,7 +55,14 @@ class inputs():
          py.refresh()
          dob=py.getstr().decode()
          Studentdob.append(dob)
+         if len(Students) == 0:
+                f = open("students.txt", "w")
+         else:
+                f = open("students.txt", "a")
+         f.write(id + "\n" + name + "\n" + dob + "\n")
+         f.close()
          Student(id,name,dob)
+         
          
     
      def inputCourses():
@@ -72,12 +80,19 @@ class inputs():
          py.refresh()
          credit=float(py.getstr().decode())
          Courses_credit.append(credit)
+         if len(Courses) == 0:
+                f = open("courses.txt", "w")
+         else:
+                f = open("courses.txt", "a")
+        
+         f.write(cid + "\n" + name + "\n" + str(credit) + "\n")
+         f.close()
          Course(cid,name,credit)
          
          
      def inputmark():
          py.addstr("- Enter the courseID you want to input mark: ")
-         cid = (py.getstr().decode())
+         cid = py.getstr().decode()
          py.clear()
          py.refresh()
          if cid in CoursesID:
@@ -104,6 +119,12 @@ class inputs():
                 exit()
          else:
              exit() 
+         if len(Mark) == 0:
+                f = open("marks.txt", "w")
+         else:
+                f = open("marks.txt", "a")
+         f.write(id + "\n" + cid + "\n" + str(marks) + "\n")
+         f.close()
          Mark_marks.append(marks)
          Marks(cid,id,marks)
          
@@ -129,4 +150,5 @@ class inputs():
                  py.refresh()
                  break
                  
+    
     

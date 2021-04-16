@@ -188,16 +188,24 @@ class main:
             py.addstr("enter student id you want to calculate gpa:")
             id =py.getstr().decode()
             if id in StudentID:
-                for i in range(0,len(Mark)):
+                for i in range(0,len(Students)):
                      totalCredit=np.sum(cre)
                      totalValue=np.sum(np.multiply(value,cre))
+                     py.refresh()
                      gpa=totalValue/totalCredit
+                     py.refresh()
+                    
             else: 
                 return 0
+    
             Mark_gpa.append(gpa)
+            py.refresh()
             for mark in Mark:
+                 py.clear()
+                 py.refresh()
                  py.addstr(" [Mark_studentid: ] %s   [Gpa: ]%s \n" %(mark.get_id(),gpa))
                  py.refresh()
+               
                  break
                  
 # -------------------------------------------------display function-------------------------------------------#

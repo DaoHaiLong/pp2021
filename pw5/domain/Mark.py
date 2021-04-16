@@ -1,5 +1,4 @@
 
-
 Mark=[]
 Mark_marks=[]
 Mark_gpa=[]
@@ -13,6 +12,7 @@ class Marks:
         self.gpa=gpa
         Mark.append(self)
         Mark_marks.append(self.marks)
+        
         
     def get_cid(self):
          return self.cid
