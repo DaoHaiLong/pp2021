@@ -53,7 +53,8 @@ class mains():
                              new_zip.write(file_name)
                          for file_name in file_list:
                              os.remove(file_name)
-                     exit()        
+                     exit()   
+                          
             while True:
                  py.addstr("1.Calculate and display gpa:\n")
                  py.addstr("2.Show Student :\n")
@@ -79,34 +80,40 @@ class mains():
                     outputs.ShowMarks()
                  if option1==5:
                      outputs.GPA_decending()
+                     
                  if option1==6:
+                     
                      file_list = ['students.txt', 'courses.txt', 'marks.txt']
                      with zipfile.ZipFile('student.dat', 'w') as new_zip:
                          for file_name in file_list:
                              new_zip.write(file_name)
                          for file_name in file_list:
                              os.remove(file_name)
+                             
                  if option1==7:
+                     
                     if os.path.isfile('student.dat'):
                          py.addstr("file exist\n")
                          zip_file = zipfile.ZipFile('student.dat', 'r')
                          py.addstr("Extracting all the files now...\n")
                          zip_file.extractall()
-                    if os.path.isfile('students.txt'):  # Load data from students.txt
-                         fs = open('students.txt', 'r')
-                         fs.read().splitlines()
-                    if os.path.isfile('courses.txt'):  # Load data from courses.txt
-                         fc = open('courses.txt', 'r')
-                         fc.read().splitlines()
-                    if os.path.isfile('marks.txt'):  # Load data from marks.txt
-                         mf = open('marks.txt', 'r')
-                         mf.read().splitlines()
+                         if os.path.isfile('students.txt'):     # Load data from students.txt
+                             fs = open('students.txt', 'r')
+                             fs.read().splitlines()
+                         if os.path.isfile('courses.txt'):     # Load data from courses.txt
+                             fc = open('courses.txt', 'r')
+                             fc.read().splitlines()
+                         if os.path.isfile('marks.txt'):      # Load data from marks.txt
+                             mf = open('marks.txt', 'r')
+                             mf.read().splitlines()
+                             
                  elif option1==8:
                      py.addstr("  Good bye,see you again\n  ")
                      py.refresh()
                      curses.napms(1000)
                      curses.endwin()
                      exit()  
+                     
 if __name__ == '__main__':
       
     mains.StudentManagement()
