@@ -182,7 +182,6 @@ class main:
 
      def Gpa():
          #  If Number courses> = 2 then to calculate the gpa of a student we must enter the correct student id #
-         
             value=np.array([Mark_marks])
             cre=np.array([Courses_credit])
             py.addstr("enter student id you want to calculate gpa:")
@@ -193,8 +192,7 @@ class main:
                      totalValue=np.sum(np.multiply(value,cre))
                      py.refresh()
                      gpa=totalValue/totalCredit
-                     py.refresh()
-                    
+                     py.refresh()            
             else: 
                 return 0
      
