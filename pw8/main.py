@@ -57,12 +57,12 @@ class mains():
                      curses.endwin()
                      with open('student.dat', 'wb') as zip:
                         BackgroundThreadobj(pmo="dump",pdf=zip,pdum=len(Courses))   
-                        for Course in Courses:
-                           BackgroundThreadobj(pmo="dump",pdf=zip,pdum=Course)
+                        for course in Courses:
+                           BackgroundThreadobj(pmo="dump",pdf=zip,pdum=course)
                              
                         BackgroundThreadobj(pmo="dump",pdf=zip,pdum=len(Students))
-                        for Student in Students:
-                            BackgroundThreadobj(pmo="dump",pdf=zip,pdum=Student)
+                        for student in Students:
+                            BackgroundThreadobj(pmo="dump",pdf=zip,pdum=student)
                             
                         BackgroundThreadobj(pmo="dump",pdf=zip,pdum=len(Mark))
                         for mark in Mark:
@@ -96,12 +96,12 @@ class mains():
                  if option1==6:
                      with open('student.dat', 'wb') as zip:
                         BackgroundThreadobj(pmo="dump",pdf=zip,pdum=len(Courses))   
-                        for Course in Courses:
-                           BackgroundThreadobj(pmo="dump",pdf=zip,pdum=Course)
+                        for course in Courses:
+                           BackgroundThreadobj(pmo="dump",pdf=zip,pdum=course)
                              
                         BackgroundThreadobj(pmo="dump",pdf=zip,pdum=len(Students))
-                        for Student in Students:
-                            BackgroundThreadobj(pmo="dump",pdf=zip,pdum=Student)
+                        for student in Students:
+                            BackgroundThreadobj(pmo="dump",pdf=zip,pdum=student)
                             
                         BackgroundThreadobj(pmo="dump",pdf=zip,pdum=len(Mark))
                         for mark in Mark:
