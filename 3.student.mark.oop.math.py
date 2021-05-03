@@ -197,7 +197,7 @@ class main:
                     
             else: 
                 return 0
-    
+     
             Mark_gpa.append(gpa)
             py.refresh()
             for mark in Mark:

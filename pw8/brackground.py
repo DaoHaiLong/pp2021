@@ -11,7 +11,7 @@ class BackgroundThread(threading.Thread):
 
     def RunThreading(self):
         if self.__pmo == "dump":
-            if self.__ploa is not None:
+            if self.__pdum is not None:
                 pickle.dump(self.__pdum, self.__pdf)
             else:
                  return 0

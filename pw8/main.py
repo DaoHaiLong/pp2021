@@ -110,15 +110,15 @@ class mains():
                  if option1==7:
                     if os.path.isfile('student.dat'):
                         with open('student.dat', 'rb') as zip:
-                            BackgroundThreadobj(pmo="load",pdf=zip,ploa=Num)
+                            BackgroundThreadobj(pmo="load",pdf=zip,ploa=Student)
                             for i in range(Num):
-                                BackgroundThreadobj(pmo="load",pdf=zip)
-                            BackgroundThreadobj(pmo="load",pdf=zip,ploa=Nco)
+                                BackgroundThreadobj(pmo="load",pdf=zip,ploa=Student)
+                            BackgroundThreadobj(pmo="load",pdf=zip,ploa=Courses)
                             for i in range(Nco):
-                                BackgroundThreadobj(pmo="load",pdf=zip)
-                            BackgroundThreadobj(pmo="load",pdf=zip,ploa=len(Mark))
+                                BackgroundThreadobj(pmo="load",pdf=zip,ploa=Courses)
+                            BackgroundThreadobj(pmo="load",pdf=zip,ploa=Mark)
                             for i in range(len(Mark)):
-                                BackgroundThreadobj(pmo="load",pdf=zip)
+                                BackgroundThreadobj(pmo="load",pdf=zip,ploa=Mark)
                                 
                  elif option1==8:
                      py.addstr("  Good bye,see you again\n  ")
