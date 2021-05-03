@@ -118,7 +118,7 @@ class mains():
                                 BackgroundThreadobj(pmo="load",pdf=zip)
                             BackgroundThreadobj(pmo="load",pdf=zip,ploa=len(Mark))
                             for i in range(len(Mark)):
-                                BackgroundThreadobj(pmo="dump",pdf=zip)
+                                BackgroundThreadobj(pmo="load",pdf=zip)
                                 
                  elif option1==8:
                      py.addstr("  Good bye,see you again\n  ")
