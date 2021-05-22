@@ -188,7 +188,7 @@ class inputs():
             elif name=="":
                 messagebox.showerror(message="Error: Courses Name  be empty")
                 
-            elif credit=="" or credit <0:
+            elif credit=="" :
                 messagebox.showerror(message="Error: Courses credit  be empty")
                 
             else:
