@@ -45,7 +45,7 @@ def StudentManagement():
     
     root = Tk()
     root.title('Student Management')
-    root.geometry("400x500")
+    root.geometry("400x550")
     mainframe = Frame(root)
     mainframe.grid()
     lblmain=Label(mainframe,text='Student Management',font='arial')

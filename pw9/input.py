@@ -72,13 +72,13 @@ class inputs():
             try:
                 Nco = int(txt_numCOU.get())
                 if Nco <= 0:
-                    messagebox.showerror(message="Error: number of students must be non-negative")
+                    messagebox.showerror(message="Error: number of courses must be non-negative")
                     txt_numCOU.delete(0, END)
                 else:
                       Nco = int(txt_numCOU.get())
                       root1.destroy()
             except:
-                messagebox.showerror(message="Invalid number of student")
+                messagebox.showerror(message="Invalid number of courses")
 
         btnCOU = Button(mainframe1,
                         fg="red",
@@ -122,6 +122,7 @@ class inputs():
                 id=txt_stuId.get()
                 name=txt_stuName.get()
                 dob=txt_studob.get()
+                
                 if id=="":
                     messagebox.showerror(message="Error: Student ID  be empty")
                 elif name=="":
@@ -180,12 +181,16 @@ class inputs():
             cid=txt_couId.get()
             name=txt_couName.get()
             credit=txt_coucredit.get()
-            if cid=="":
-                    messagebox.showerror(message="Error: Courses ID  be empty")
-            elif cid=="":
+            
+            if cid=="" :
+                messagebox.showerror(message="Error: Courses ID  be empty")
+                
+            elif name=="":
                 messagebox.showerror(message="Error: Courses Name  be empty")
-            elif cid=="":
+                
+            elif credit=="" or credit <0:
                 messagebox.showerror(message="Error: Courses credit  be empty")
+                
             else:
                 CoursesID.append(cid)
                 CoursesName.append(name)
