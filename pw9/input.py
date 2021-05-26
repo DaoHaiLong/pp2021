@@ -232,7 +232,7 @@ class inputs():
         txt_stuId.grid(row=1, column=1, padx=2,sticky="w")
         txt_stuId.focus_set()
         
-        marks_var=StringVar()
+        marks_var=IntVar()
         lbl_marks = Label(mainframe4, font=('arial', 10), text="Mark", padx=10, pady=10)
         lbl_marks.grid(row=2, column=0)
         txt_marks = Entry(mainframe4, font=('arial', 10), width=20, textvariable=marks_var)
@@ -247,11 +247,13 @@ class inputs():
                 if (id=="") or (id  not in StudentID):
                     messagebox.showerror(message="Error: Student ID  be empty")
                 elif id in StudentID:
-                    marks=math.floor(txt_marks.get())
+                    mark=float(txt_marks.get())
+                    marks=math.floor(mark)
                     if marks<0 or marks >20:
                         messagebox.showerror(message="Error: mark aren't exit")
                     else:
-                        marks=math.floor(txt_marks.get())
+                        mark=float(txt_marks.get())
+                        marks=math.floor(mark)
                         Mark_marks.append(marks)
                         Marks(cid,id,marks)
                         mar.destroy()
